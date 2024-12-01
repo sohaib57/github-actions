@@ -1,4 +1,4 @@
-name: First worflow
+name: First workflow
 on: push 
 jobs: 
   build: 
@@ -7,3 +7,5 @@ jobs:
      - uses: actions/checkout@v4
      - name: Run a sample github action
        run: echo "This workflow run successfully for this particular action"
+     - name: Simulating error
+       run: echo "error taking place"; exit 1
