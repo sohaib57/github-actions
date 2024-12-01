@@ -1,4 +1,4 @@
-name: Super Linter
+name: Super-Linter
 
 on:
   push:
@@ -9,8 +9,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Run Super Linter
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Super-Linter
         uses: super-linter/super-linter@v7.2.0
